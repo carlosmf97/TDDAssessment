@@ -26,7 +26,7 @@ public class FlightController {
 	//Metodo para devolver los vuelos en una fecha
 	@GetMapping ("/flight/{date}+{origin}+{destination}")
 	public List<Flight> availableFlightsFromACityAndDate
-	(@PathVariable  Date date,@PathVariable String origin,@PathVariable String destination) {
+	(@PathVariable Date date,@PathVariable String origin,@PathVariable String destination) {
 		return FlightDaoService.getByDate(repository.findAll(), date, origin, destination);
 	}
 	

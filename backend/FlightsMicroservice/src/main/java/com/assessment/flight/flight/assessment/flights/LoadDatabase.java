@@ -1,6 +1,5 @@
 package com.assessment.flight.flight.assessment.flights;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Arrays;
 
