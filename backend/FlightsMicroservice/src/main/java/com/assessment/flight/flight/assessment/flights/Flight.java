@@ -1,6 +1,6 @@
-package com.assessment.flight.webservice.flights;
+package com.assessment.flight.flight.assessment.flights;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -12,15 +12,16 @@ public class Flight {
 	
 	private @Id @GeneratedValue Long id;
 	private String Airline;
-	private Date date;
+	private LocalDate date;
 	private String origin;
 	private String destination;
 	private List<String> scales;
 	private Boolean luggage;
+	private int numAsientos = 150;
 	
 	public Flight() {}
 	
-	public Flight(String airline, String origin, String destination, Date date, List<String> scales, Boolean luggage) {
+	public Flight(String airline,LocalDate date, String origin, String destination, List<String> scales, Boolean luggage) {
 		this.Airline = airline;
 		this.date = date;
 		this.origin = origin;
@@ -37,11 +38,11 @@ public class Flight {
 		Airline = airline;
 	}
 
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 
@@ -89,6 +90,17 @@ public class Flight {
 	public String toString() {
 		return "Flight [Airline=" + Airline + ", date=" + date + ", scales=" + scales + ", luggage=" + luggage + "]";
 	}
+
+	public int getNumAsientos() {
+		return numAsientos;
+	}
+
+	public void setNumAsientos(int numAsientos) {
+		this.numAsientos = numAsientos;
+	}
 	
+	public void cogeAsiento() {
+		this.numAsientos--;
+	}
 	
 }

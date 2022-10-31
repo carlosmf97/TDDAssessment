@@ -1,4 +1,5 @@
-package com.assessment.flight.webservice.flights;
+package com.assessment.flight.flight.assessment.flights;
+
 
 import java.sql.Date;
 import java.util.ArrayList;
