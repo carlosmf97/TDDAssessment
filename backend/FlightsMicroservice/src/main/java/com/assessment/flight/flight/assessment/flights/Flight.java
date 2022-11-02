@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 public class Flight {
 	
 	private @Id @GeneratedValue Long id;
-	private String Airline;
+	private String airline;
 	private LocalDate date;
 	private String origin;
 	private String destination;
@@ -22,7 +22,7 @@ public class Flight {
 	public Flight() {}
 	
 	public Flight(String airline,LocalDate date, String origin, String destination, List<String> scales, Boolean luggage) {
-		this.Airline = airline;
+		this.airline = airline;
 		this.date = date;
 		this.origin = origin;
 		this.destination = destination;
@@ -31,11 +31,11 @@ public class Flight {
 	}
 
 	public String getAirline() {
-		return Airline;
+		return airline;
 	}
 
 	public void setAirline(String airline) {
-		Airline = airline;
+		airline = airline;
 	}
 
 	public LocalDate getDate() {
@@ -88,7 +88,7 @@ public class Flight {
 	
 	@Override
 	public String toString() {
-		return "Flight [Airline=" + Airline + ", date=" + date + ", scales=" + scales + ", luggage=" + luggage + "]";
+		return "Flight [Airline=" + airline + ", date=" + date + ", scales=" + scales + ", luggage=" + luggage + "]";
 	}
 
 	public int getNumAsientos() {

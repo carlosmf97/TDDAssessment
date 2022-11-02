@@ -23,28 +23,4 @@ public class LoadDatabase {
 
 	    };
 	  }
-	  
-	  /*@Bean
-	  CommandLineRunner initUsersDatabase(UserAccountRepository repository) {
-
-	    return args -> {
-	      log.info("Preloading " + repository.save(new UserAccount("solera", "account","solera@solera.com","bootcamp2")));
-	    };
-	  }
-	  @Bean
-	  CommandLineRunner initBanksDatabaseBanks(Flight repository) {
-
-	    return args -> {
-	      log.info("Preloading " + repository.save(new BankAccount("BBVA", "solera@solera.com")));
-	      log.info("Preloading " + repository.save(new BankAccount("Santander", "framarlav")));
-	      log.info("Preloading " + repository.save(new BankAccount("BBVA", "framarlav")));
-	    };
-	  }
-	  @Bean
-	  CommandLineRunner initTransactionsDatabaseTransactions(TransactionRepository repository) {
-
-	    return args -> {
-	      log.info("Preloading " + repository.save(new Transaction("solera@solera.com", "framarlav","BBVA","Santander",2000)));
-	    };
-	  }*/
 }
